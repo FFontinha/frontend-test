@@ -1,10 +1,7 @@
 import * as React from "react";
 
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
 
@@ -13,10 +10,6 @@ import Image from '../components/image'
 
 import usersIcon from './../../resources/icon_for_users.svg';
 import logoIcon from './../../resources/favicon-32x32.png';
-
-
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 
 
@@ -46,56 +39,48 @@ const description = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  'text-align': 'center',
+  textAlign: 'center',
   fontFamily: 'Arial',
   color: '#484644',
-  'font-size': '20px',
+  fontSize: '20px',
 }
 
 const userIcon = {
   position: 'relative',
   right: '15px',
   bottom: '8px',
-  'max-height': '32px',
-  'max-width': '32px',
+  maxHeight: '32px',
+  maxWidth: '32px',
 }
 
 const logo = {
-  'max-height': '40px',
-  'max-width': '40px',
-}
-
-const imageList = {
-  width: '100%',
-  alignItems: 'center',
-  justifyContent: 'center',
+  maxHeight: '40px',
+  maxWidth: '40px',
 }
 
 
 
 // markup
 const IndexPage = () => {
-
-
   return (
     <main>
       <Topbar/>
       <Container>
-        <div class ="mt-5" style={title}>
+        <div className ="mt-5" style={title}>
           <img style={userIcon} src={usersIcon} alt="titleIcon"></img><h2><strong>FOR USERS</strong></h2>
         </div>
         <div style={description}>
           <aside>Content management and collaboration for a better workflow</aside>
         </div>
       </Container>
-      <hr class="my-5"/>
+      <hr className="my-5"/>
       <Container>
-        <div name="Drive" class ="mt-5">
+        <div name="Drive" className ="mt-5">
           <Row>
             <Col xs={12} md={6}>
-              <div class="my-auto">
+              <div className="my-auto">
                 <h2 style={blueTitle}><strong>Drive</strong></h2>
-                <aside class="my-3" style={description}>Content management with version control and advanced search</aside>
+                <aside className="my-3" style={description}>Content management with version control and advanced search</aside>
                 <p style={description}><a href="#">Learn more ></a></p>
               </div>
             </Col>
@@ -111,9 +96,9 @@ const IndexPage = () => {
           </Row>
         </div>
       </Container>
-        <hr class="my-5"/>
+        <hr className="my-5"/>
       <Container>
-        <div name="Reader" class ="mt-5">
+        <div name="Reader" className ="mt-5">
           <Row>
             <Col xs={{span: 12, order: 2 }} md={{ span: 6, order: 1 }}>
               <Image style={{ width: '100%' }} fileName="reader.png"  alt="Reader"/>
@@ -121,7 +106,7 @@ const IndexPage = () => {
             <Col xs={{span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
               <div>
                 <h2 style={blueTitle}><strong>Reader</strong></h2>
-                <aside class="my-3" style={description}>Viewer of cloud content including PDFs, websites, images and more</aside>
+                <aside className="my-3" style={description}>Viewer of cloud content including PDFs, websites, images and more</aside>
                 <p style={description}><a href="#">Learn more ></a></p>
               </div>
             </Col>
@@ -134,14 +119,14 @@ const IndexPage = () => {
           </Row>
         </div>
       </Container>
-      <hr class="my-5"/>
+      <hr className="my-5"/>
       <Container>
-        <div name="Compare" class ="mt-5">
+        <div name="Compare" className ="mt-5">
           <Row>
             <Col xs={12} md={6}>
               <div>
                 <h2 style={blueTitle}><strong>Compare</strong></h2>
-                <aside class="my-3" style={description}>Compare different versions of Microsoft Office files</aside>
+                <aside className="my-3" style={description}>Compare different versions of Microsoft Office files</aside>
                 <p style={description}><a href="#">Learn more ></a></p>
               </div>
             </Col>
@@ -157,9 +142,9 @@ const IndexPage = () => {
           </Row>
         </div>
       </Container>
-      <hr class="my-5"/>
+      <hr className="my-5"/>
       <Container>
-        <div name="References" class ="mt-5">
+        <div name="References" className ="mt-5">
           <Row>
             <Col xs={{span: 12, order: 2 }} md={{ span: 6, order: 1 }}>
               <Image style={{ width: '100%' }} fileName="references.png"  alt="References"/>
@@ -167,7 +152,7 @@ const IndexPage = () => {
             <Col xs={{span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
               <div>
                 <h2 style={blueTitle}><strong>References</strong></h2>
-                <aside class="my-3" style={description}>Keep track and review all your sources of information</aside>
+                <aside className="my-3" style={description}>Keep track and review all your sources of information</aside>
                 <p style={description}><a href="#">Learn more ></a></p>
               </div>
             </Col>
@@ -180,15 +165,15 @@ const IndexPage = () => {
           </Row>
         </div>
       </Container>
-      <footer style={{ width: '100%' }} class="bg-light text-center mt-5">
+      <footer style={{ width: '100%' }} className="bg-light text-center mt-5">
           <h2>CONTACT</h2>
           <p>Synergy Cloud is limited to a select number of partners at the moment. If you are interested in learning more, please reach out using the chat functionality or by email:</p>
           <a href="mailto:hello@synergy.page">hello@synergy.page</a>
-          <p class="mt-5"><img style={logo} src={logoIcon} alt="titleIcon"></img></p>
-          <div class="mt-5">
+          <p className="mt-5"><img style={logo} src={logoIcon} alt="Logo Icon"></img></p>
+          <div className="mt-5">
             <ul style={{'display':'inline'}}>
-              <li class="mx-3" style={{'display':'inline'}}><a href="#">Privacy Policy</a></li>
-              <li class="mx-3" style={{'display':'inline'}}><a  href="#">Terms and Conditions</a></li>
+              <li className="mx-3" style={{'display':'inline'}}><a href="#">Privacy Policy</a></li>
+              <li className="mx-3" style={{'display':'inline'}}><a  href="#">Terms and Conditions</a></li>
             </ul>
           <br/><br/>
           </div>
